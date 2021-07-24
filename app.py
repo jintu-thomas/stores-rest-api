@@ -12,11 +12,14 @@ from resources.stores import Store,StoreList
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///data.db"
+app.config['SQLALCHEMY_DATABASE_URI'] ="BATABSE_URL" "sqlite:///data.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'jose'
 api = Api(app)
 
+# @app.before_first_request                   
+# def create_tables():
+#     db.create_all()   (this is for run locallly otherwise run.py)
 
 
 jwt = JWT(app,authentcate,identity)         #jwt create new endpoint calle s /auth`
