@@ -12,7 +12,7 @@ from resources.stores import Store,StoreList
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] ="BATABSE_URL" #"sqlite:///data.db"
+app.config['SQLALCHEMY_DATABASE_URI'] ="postgres://postgres@localhost:5432/data" #"sqlite:///data.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'jose'
 api = Api(app)
